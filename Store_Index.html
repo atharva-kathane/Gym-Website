@@ -1,0 +1,559 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>GymWebsite</title>
+    <link rel="shortcut icon" type="image" href="/Re_logo.jpg" style="height: 100px; width: 100px;">
+    <link href="bootstrap.css" rel="stylesheet" />
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="popper.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <link href="animate.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" type="image" href="/GymWebsite/Images/Re_logo.jpg" style="height: 200px; width: 200px;">
+
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  background: linear-gradient(#000000 0%,#282828 18%, #383838 33%, #585858 67%, #696969 98%);
+}
+
+
+.sidenav {
+  height: 100%;
+  width:120px;
+  position: fixed;
+  z-index: 1;
+  top: 200px;
+  left: 50px;
+  background: inherit;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: red;
+}
+
+.main {
+  margin-left: 180px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 700px) {
+  .sidenav {padding-top: 5px;padding-left:0px }
+  .sidenav a {font-size: 18px; padding-left:0px}
+}
+
+.show-cart li {
+  display: flex;
+}
+.card {
+  margin-bottom: 20px;
+}
+.card-img-top {
+  width: 200px;
+  height: 150px;
+  align-self: center;
+}
+.card-title {
+    text-align:center;
+    color:black;
+    }
+.card-text {
+    color:grey;
+    }
+
+
+
+@media screen and (max-width: 799px) {
+   #sidenav {
+       display:none;
+   }
+}
+</style>
+</head>
+<body style="background-color:black">
+<div class="container" style="margin-top:100px;margin-bottom:50px">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <h1 style="color:red;background-color:whitesmoke;text-align:center">SHOP</h1>
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+
+        <br /><br />
+
+       <div class="sidenav">
+        <a href="/index.php">HOME</a>
+        <a  href="#sec1">Popular</a>
+       <a  href="#sec2">Men's</a>
+       <a  href="#sec3">Women's</a>
+       <a  href="#sec4">Equipments</a>
+       <a  href="#sec5">Supplements</a>
+       </div>
+       
+<div class="main"> 
+<div class="container">
+    
+ <div class="row">
+        <div class="col-lg-3"><u style="color:palevioletred"> <h2 id="sec1" style="color:palevioletred">Popular</h2></u></div>
+        <!--<div class="popular">P</div>-->
+    </div>
+    <br />
+
+    <div class="row">
+        <div class="col-lg-8"></div>
+
+         <div class="col-lg-2"> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>) </button></div>
+
+         <div class="col-lg-2"> <button class="clear-cart btn btn-danger">Clear Cart</button> </div>
+    </div>
+
+    <br />
+
+    <!--//cards -->
+
+<div class="row"> <!--POPULAR CARD ROW STARTS HERE-->
+
+      <div class="col">
+        <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="/GymWebsite/Images/couple1.png" alt="Card image cap" /> 
+            <div class="card-block">
+            <h5 class="card-title">Comfy Tshirt Pair</h5>
+            <p class="card-text">Price: ₹699</p>
+            <a href="#" data-name="Comfy Tshirt Pair" data-price="699" class="add-to-cart btn btn-primary" style="text-align:center">Add to cart</a>
+            </div>
+        </div>
+      </div>
+        
+      <div class="col">
+        <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="/GymWebsite/Images/couple2.png" alt="Card image cap">
+            <div class="card-block">
+            <h5 class="card-title">Trendy Tshirt Pair</h5>
+            <p class="card-text">Price: ₹699</p>
+            <a href="#" data-name="Trendy Tshirt Pair" data-price="699" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+      </div>
+        
+      <div class="col">
+            <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="/GymWebsite/Images/womens1.png" alt="Card image cap">
+            <div class="card-block">
+            <h5 class="card-title">Women's Tee</h5>
+            <p class="card-text">Price: ₹499 </p>
+            <a href="#" data-name="Women's Tee" data-price="499" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+      </div>
+
+</div> <!--POPULAR CARD ROW ENDS HERE-->
+    
+    <br /><br />
+    <div class="row">
+        <div class="col-lg-3"><u style="color:palevioletred"> <h2 id="sec2" style="color:palevioletred">Men's</h2></u></div>
+        <!--<div class="mens">M</div>-->
+    </div>
+    <br />
+<div class="row"> <!--MEN'S CARD ROW STARTS HERE-->
+
+      <div class="col">
+        <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="/GymWebsite/Images/menstshirt1.jpg" alt="Card image cap" /> 
+            <div class="card-block">
+            <h5 class="card-title">Men's Tshirt GymWebsite</h5>
+            <p class="card-text">Price: ₹499</p>
+            <a href="#" data-name="Men's Tshirt GymWebsite" data-price="499" class="add-to-cart btn btn-primary" style="text-align:center">Add to cart</a>
+            </div>
+        </div>
+      </div>
+    
+      <div class="col">
+        <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="/GymWebsite/Images/mens2.png" alt="Card image cap">
+            <div class="card-block">
+            <h5 class="card-title">Men's Tshirt black</h5>
+            <p class="card-text">Price: ₹499</p>
+            <a href="#" data-name="Men's Tshirt black" data-price="499" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+      </div>
+    
+      <div class="col">
+            <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="/GymWebsite/Images/mens3.png" alt="Card image cap">
+            <div class="card-block">
+            <h5 class="card-title">Men's Tshirt white</h5>
+            <p class="card-text">Price: ₹499</p>
+            <a href="#" data-name="Men's Tshirt white" data-price="499" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+      </div>
+
+</div> <!--MEN'S CARD ROW ENDS HERE-->
+
+    <br /><br />
+    <div class="row">
+        <div class="col-lg-3"><u style="color:palevioletred"> <h2 id="sec3" style="color:palevioletred">Women's</h2></u></div>
+        <!--<div class="womens">W</div>-->
+    </div>
+    <br />
+<div class="row"> <!--WOMEN'S CARD ROW STARTS HERE-->
+    
+      <div class="col">
+        <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="/GymWebsite/Images/womens1.png" alt="Card image cap" /> 
+            <div class="card-block">
+            <h5 class="card-title">Women's Tee</h5>
+            <p class="card-text">Price: ₹499</p>
+            <a href="#" data-name="Women's Tee" data-price="499" class="add-to-cart btn btn-primary" style="text-align:center">Add to cart</a>
+            </div>
+        </div>
+      </div>
+    
+      <div class="col">
+        <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="/GymWebsite/Images/womens2.png" alt="Card image cap">
+            <div class="card-block">
+            <h5 class="card-title">Women's Full Tshirt</h5>
+            <p class="card-text">Price: ₹599</p>
+            <a href="#" data-name="Women's Full Tshirt" data-price="599" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+      </div>
+    
+      <div class="col">
+            <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="/GymWebsite/Images/womens3.png" alt="Card image cap">
+            <div class="card-block">
+            <h5 class="card-title">Women's Casual Tee</h5>
+            <p class="card-text">Price: ₹399</p>
+            <a href="#" data-name="Women's Casual Tee" data-price="399" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+      </div>
+
+</div> <!--WOMEN'S CARD ROW ENDS HERE-->
+
+    <br /><br />
+    <div class="row">
+        <div class="col-lg-3"><u style="color:palevioletred"> <h2 id="sec4" style="color:palevioletred">Equipments</h2></u></div>
+        <!--<div class="equip">E</div>-->
+    </div>
+    <br />
+<div class="row"> <!--EQUIPMENTS CARD ROW STARTS HERE-->
+    
+      <div class="col">
+        <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="/GymWebsite/Images/equip1.jpg" alt="Card image cap" /> 
+            <div class="card-block">
+            <h5 class="card-title">Dumb Bell</h5>
+            <p class="card-text">Price: ₹1999</p>
+            <a href="#" data-name="Dumb Bell" data-price="1999" class="add-to-cart btn btn-primary" style="text-align:center">Add to cart</a>
+            </div>
+        </div>
+      </div>
+    
+      <div class="col">
+        <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="/GymWebsite/Images/equip2.jpg" alt="Card image cap">
+            <div class="card-block">
+            <h5 class="card-title">Bar Bell</h5>
+            <p class="card-text">Price: ₹2499</p>
+            <a href="#" data-name="Bar Bell" data-price="2499" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+      </div>
+    
+      <div class="col">
+            <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="/GymWebsite/Images/equip3.jpg" alt="Card image cap">
+            <div class="card-block">
+            <h5 class="card-title">Mat</h5>
+            <p class="card-text">Price: ₹299</p>
+            <a href="#" data-name="Mat" data-price="299" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+      </div>
+
+</div> <!--EQUIPMENTS CARD ROW ENDS HERE-->
+
+    <br /><br />
+    <div class="row">
+        <div class="col-lg-3"><u style="color:palevioletred"> <h2 id="sec5" style="color:palevioletred">Supplements</h2></u></div>
+        <!--<div class="supp">S</div>-->
+    </div>
+    <br />
+<div class="row"> <!--SUPPLEMENTS CARD ROW STARTS HERE-->
+    
+      <div class="col">
+        <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="/GymWebsite/Images/suppgain (1).jpg" alt="Card image cap" /> 
+            <div class="card-block">
+            <h5 class="card-title">Mass Gainer 1kg</h5>
+            <p class="card-text">Price: ₹1499</p>
+            <a href="#" data-name="Mass Gainer" data-price="1499" class="add-to-cart btn btn-primary" style="text-align:center">Add to cart</a>
+            </div>
+        </div>
+      </div>
+    
+      <div class="col">
+        <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="/GymWebsite/Images/supppro (2).jpg" alt="Card image cap">
+            <div class="card-block">
+            <h5 class="card-title">Whey Protein 1kg</h5>
+            <p class="card-text">Price: ₹1599</p>
+            <a href="#" data-name="Whey Protein" data-price="1599" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+      </div>
+    
+      <div class="col">
+            <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="/GymWebsite/Images/supppro (1).jpg" alt="Card image cap">
+            <div class="card-block">
+            <h5 class="card-title">Whey Protein new 1kg</h5>
+            <p class="card-text">Price: ₹1699</p>
+            <a href="#" data-name="Whey Protein new" data-price="1699" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+      </div>
+
+</div> <!--SUPPLEMENTS CARD ROW ENDS HERE-->
+
+    <br />
+    <div class="row">
+        <div class="col-lg-6"><i style="color:black"> <h4 style="color:black">Many more to come...</h4></i></div>
+        <!--<div class="future">F</div>-->
+    </div>
+
+    <script>
+        var shoppingCart = (function () {
+            // =============================
+            // Private methods and propeties
+            // =============================
+            cart = [];
+
+            // Constructor
+            function Item(name, price, count) {
+                this.name = name;
+                this.price = price;
+                this.count = count;
+            }
+
+            // Save cart
+            function saveCart() {
+                sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
+            }
+
+            // Load cart
+            function loadCart() {
+                cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+            }
+            if (sessionStorage.getItem("shoppingCart") != null) {
+                loadCart();
+            }
+
+
+            // =============================
+            // Public methods and propeties
+            // =============================
+            var obj = {};
+
+            // Add to cart
+            obj.addItemToCart = function (name, price, count) {
+                for (var item in cart) {
+                    if (cart[item].name === name) {
+                        cart[item].count++;
+                        saveCart();
+                        return;
+                    }
+                }
+                var item = new Item(name, price, count);
+                cart.push(item);
+                saveCart();
+            }
+            // Set count from item
+            obj.setCountForItem = function (name, count) {
+                for (var i in cart) {
+                    if (cart[i].name === name) {
+                        cart[i].count = count;
+                        break;
+                    }
+                }
+            };
+            
+
+            // Clear cart
+            obj.clearCart = function () {
+                cart = [];
+                saveCart();
+            }
+
+            // Count cart 
+            obj.totalCount = function () {
+                var totalCount = 0;
+                for (var item in cart) {
+                    totalCount += cart[item].count;
+                }
+                return totalCount;
+            }
+
+            // Total cart
+            obj.totalCart = function () {
+                var totalCart = 0;
+                for (var item in cart) {
+                    totalCart += cart[item].price * cart[item].count;
+                }
+                return Number(totalCart.toFixed(2));
+            }
+
+            // List cart
+            obj.listCart = function () {
+                var cartCopy = [];
+                for (i in cart) {
+                    item = cart[i];
+                    itemCopy = {};
+                    for (p in item) {
+                        itemCopy[p] = item[p];
+
+                    }
+                    itemCopy.total = Number(item.price * item.count).toFixed(2);
+                    cartCopy.push(itemCopy)
+                }
+                return cartCopy;
+            }
+
+            // cart : Array
+            // Item : Object/Class
+            // addItemToCart : Function
+            // clearCart : Function
+            // countCart : Function
+            // totalCart : Function
+            // listCart : Function
+            // saveCart : Function
+            // loadCart : Function
+            return obj;
+        })();
+
+
+        // *****************************************
+        // Triggers / Events
+        // ***************************************** 
+
+        // Add items to the cart.
+        $('.add-to-cart').click(function (event) {
+            event.preventDefault();
+            var name = $(this).data('name');
+            var price = Number($(this).data('price'));
+            shoppingCart.addItemToCart(name, price, 1);
+            displayCart();
+        });
+
+         //Clear items of the cart.
+        $('.clear-cart').click(function () {
+            shoppingCart.clearCart();
+            displayCart();
+        });
+
+
+        function displayCart() {
+            var cartArray = shoppingCart.listCart();
+            var output = "";
+            for (var i in cartArray) {
+                output += "<tr>"
+                  + "<td>" + cartArray[i].name + "</td>"
+                  + "<td>(" + cartArray[i].price + ".00)</td>"
+                  + "<td>Qty - "+ cartArray[i].count +" </td>" 
+                  //+ "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
+                  + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
+                  //+ "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
+                  //+ "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
+                  + " = "
+                  + "<td>" + cartArray[i].total + "</td>"
+                  + "</tr>";
+            }
+            $('.show-cart').html(output);
+            $('.total-cart').html(shoppingCart.totalCart());
+            $('.total-count').html(shoppingCart.totalCount());
+        }
+
+        displayCart();
+
+    </script>
+</div>
+
+  <!--===================
+         Modal
+  ===================-->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table">
+          
+        </table>
+        <div>Total price: ₹<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+        <a href="checkout_form.html" class="btn btn-primary">Order now</a> 
+      </div>
+    </div>
+  </div>
+</div> 
+
+   <!--==========================
+      Smooth scroll function
+    ==========================-->
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+</script>
+
+    
+
+</div>
+</div>
+<script src="/app.js"> </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+C:\Users\SHRIDHAR CHARY\OneDrive\Documents\Visual Studio 2012\Projects\WorkoutPlan_MiniProj\WorkoutPlan_MiniProj\bin\WorkoutPlan_MiniProj.dll
+C:\Users\SHRIDHAR CHARY\OneDrive\Documents\Visual Studio 2012\Projects\WorkoutPlan_MiniProj\WorkoutPlan_MiniProj\bin\WorkoutPlan_MiniProj.pdb
+C:\Users\SHRIDHAR CHARY\OneDrive\Documents\Visual Studio 2012\Projects\WorkoutPlan_MiniProj\WorkoutPlan_MiniProj\obj\Debug\College_MiniProj.csprojResolveAssemblyReference.cache
+C:\Users\SHRIDHAR CHARY\OneDrive\Documents\Visual Studio 2012\Projects\WorkoutPlan_MiniProj\WorkoutPlan_MiniProj\obj\Debug\WorkoutPlan_MiniProj.dll
+C:\Users\SHRIDHAR CHARY\OneDrive\Documents\Visual Studio 2012\Projects\WorkoutPlan_MiniProj\WorkoutPlan_MiniProj\obj\Debug\WorkoutPlan_MiniProj.pdb

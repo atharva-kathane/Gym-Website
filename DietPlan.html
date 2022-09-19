@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Diet Plan</title>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" type="image" href="/GymWebsite/Images/Re_logo.jpg" style="height: 200px; width: 200px;">
+</head>
+<body style="background-color:black">
+    <div class="container" style="margin-top:100px;margin-bottom:50px">
+        <!--Title-->
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <h1 style="color:red;background-color:whitesmoke;text-align:center">DIET PLANS</h1>
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-lg-12" style="color:white;font-size:20px">
+                <p>Dieting is a lot like dating—the process can be so daunting and draining you give up before you’ve found “the one.” In fact, a new survey from YouGov for Forbes Health reveals that 45% of people have not stuck to a diet in the past, simply because they found it difficult to find food they enjoyed on the diet plan.</p>
+                <br />
+                <p >If you want to follow a regular diet regime then you have to first find out the type of person you are, then you can choose diet plan accordingly.</p>
+                To find out what type of person you are then you have to first calculate your <b style="color:red">Body Mass Index(BMI)</b>.<br />
+                Calculate it here!
+            </div>
+            
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-lg-5" style="color:white;font-size:19px">
+              <span>Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women.</span>  <br /><br />
+                <ul style="font-size:17px">
+                    <li>Enter your weight and height using metric measures.</li>
+                    <li>Select "<span style="color:lightgreen">Evaluate</span>" and your BMI and category will appear.</li>
+                </ul>
+            </div>
+            <div class="col-lg-4" style="text-align:left">
+                <h4 style="color:white">BMI CALCULATOR</h4>
+                <div>
+                <form>
+                <span style="color:white">Weight:</span>   &nbsp&nbsp&nbsp                               <input type='float' id='weight' placeholder='in kg' /><br /><br />
+                <span style="color:white">Height:</span>   &nbsp&nbsp&nbsp&nbsp                          <input type='float' id='height' placeholder='in cm' /><br /><br />
+                <span style="color:red"></span>            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                <input type="button" onclick="bmi()" value="Evaluate" class="btn btn-success"/> &nbsp&nbsp&nbsp&nbsp
+                <input type="reset" value="Reset" class="btn btn-warning" /> <br /><br />
+                <span style="color:white">BMI:</span>      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input id="ans" type="text" placeholder="in kg/m^2" /><br /><br />
+                <span style="color:white">Category:</span> &nbsp                                         <input type="text" id="category" /><br /><br />
+                
+                </form>
+                </div>
+                 <script>
+                    
+                     function bmi() {
+                         var w = parseFloat(document.getElementById("weight").value);  // To get weight from the input with id as weight
+                         var h = parseFloat(document.getElementById("height").value) / 100; // Convert height to meters
+                         var b = w / (h * h);  // According to the formula
+                         document.getElementById("ans").value = String(b.toPrecision(3)) ; // writing to the output 
+                         if (b < 18.5) {
+                             document.getElementById("category").value = "Underweight";
+                         }
+                         else if (b >= 18.5 && b <= 25) {
+                             document.getElementById("category").value = "Healthy weight";
+                         }
+                         else if (b > 25 && b <= 30) {
+                             document.getElementById("category").value = "Overweight";
+                         }
+                         else if (b > 30 && b <= 35) {
+                             document.getElementById("category").value = "Obese Class 1";
+                         }
+                         else if (b > 35 && b <= 40) {
+                             document.getElementById("category").value = "Obese Class 2";
+                         }
+                         else {
+                             document.getElementById("category").value = "Obese Class 3";
+                         }
+                     }
+                 </script>
+            </div>
+            <div class="col-lg-3">
+                <h4 style="color:white">Reference range</h4>
+                <table style="color:white;border-color:white" border="1">
+                    
+                    <tr style="color:white">
+                        <th>BMI</th>
+                        <th>Weight status</th>
+                    </tr>
+                    <tr style="color:white">
+                        <td>Below 18.5</td>
+                        <td>Underweight</td>
+                    </tr>
+                    <tr style="color:white">
+                        <td>18.5-24.9</td>
+                        <td>Healthy</td>
+                    </tr>
+                    <tr style="color:white">
+                        <td>25-29.9</td>
+                        <td>Overweight</td>
+                    </tr>
+                    <tr style="color:white">
+                        <td>30.0 and Above</td>
+                        <td>Obese</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <br />
+        <h4 style="color:white">Now select a diet plan accordingly and get the best tips for your type of weight absolutely free!</h4>
+        <br />
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card" style="background-color:lightgrey">
+                    <img src="/GymWebsite/Images/muscle gain.jpg" style="height:200px;width:253px" class="card-img-top" />
+                    <div class="card-body">
+                    <h4 class="card-title" style="text-decoration:underline">For Underweight</h4>
+                    <a href="Underweight.html"  class="btn btn-danger" >Read more..</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-lg-4">
+                <div class="card" style="background-color:lightgrey">
+                    <img src="/GymWebsite/Images/Maintain_diet.jpg" style="height:200px;width:253px" class="card-img-top" />
+                    <div class="card-body">
+                    <h4 class="card-title" style="text-decoration:underline">For maintaining weight</h4>
+                    <a href="HealthyDiet.html"  class="btn btn-danger">Read more..</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card" style="background-color:lightgrey">
+                    <img src="/GymWebsite/Images/fatloss.jpg" style="height:200px;width:253px" class="card-img-top" />
+                    <div class="card-body">
+                    <h4 class="card-title" style="text-decoration:underline">For Overweight and Obese</h4>
+                    <a href="Overweight.html" class="btn btn-danger">Read more..</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        </div>
+        <script src="/app.js"> </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="shortcut icon" type="image" href="/Images/Re_logo.jpg" style="height: 100px; width: 100px;">
+    
+    <link rel="stylesheet" href="styles_checkout.css">
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+  
+    <div class="main">
+        <div class="col-75">
+          <div class="container">
+            <form  class="form" id="form" action="connection2.php" method="post">
+              <div class="form-control" style="margin-top: 10px;">
+                <label>Full Name</label>
+                <input type="text" name="name" style="width: 183px;height: 1px" max="50" required>
+              </div>            
+              <div class="form-control" style="margin-top: 5px;">
+                <label>Phone Number <i style="color:red;font-size:smaller"> digits=10</i></label>
+                <input type="number" id="txtphonecheck" name="phone"  style="width: 200px" required>
+              </div>
+            
+              <div class="form-control" style="margin-top: 5px;">
+                <label>Full Address</label>
+                <input type="text" name="address" style="width: 300px;height: 1px" required>
+              </div>
+              <label>Pay on Delivery</label>
+              <input type="submit" value="Submit Details" class="btn btn-success">
+
+              <!-- <script>
+              function phoneFunc() {
+                // Get the value of the input field with id="age"
+                let x = document.getElementById("txtphonecheck").value;
+                // Defining age limit.
+                let text;
+                if ( x < 9999999999  && x > 1000000000 ) {
+                  return;
+                }
+                else{
+                  alert("Enter valid phone number")
+                }
+                
+              }</script> -->
+            </form>
+
+          </div>
+        </div>
+        
+      </div>
+      <script src="/app.js"> </script>
+</body>
+</html>
