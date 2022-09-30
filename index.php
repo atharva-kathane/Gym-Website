@@ -159,6 +159,91 @@
     <a class="c2" style="float: right; margin-right: 50px; text-decoration: none;" href="/GymWebsite/DietPlan.html">Read More ...</a>
     <br>
     <br>
+    
+    <!-- MEMBERSHIP FORM -->
+    <p class="c1" style="text-decoration-line: underline; text-decoration-style: solid; text-decoration-color: red;">MEMBERSHIP FORM</p>
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+      <form  class="form" id="form" action="/RESHAPE/connection1.php" method="post">
+        <div class="form-control" style="margin-top: 10px;">
+          <label>Name</label>
+          <input type="text" name="user_name" style="width: 200px" required>
+        </div>
+
+        <div class="form-control" style="margin-top: 5px;">
+          <label>Age <i style="color:red;font-size:smaller">must be between 14-75(both included)</i></label>
+          <input id="txtage" type="number" name="age" style="width: 200px" required>
+        </div>
+
+        <div class="form-control" style="margin-top: 5px;">
+          <label>Gender</label>
+          <br>
+          <select name="gender" style="width: 200px" required>
+            <option selected hidden value="">Select gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="na">Prefer not to mention</option>
+          </select>
+        </div>
+
+        <div class="form-control" style="margin-top: 5px;">
+          <label>Phone Number <i style="color:red;font-size:smaller">max digits=10</i></label>
+          <input id="txtphone"  type="number" name="phone_number" style="width: 200px" required>
+        </div>
+      
+        <div class="form-control" style="margin-top: 5px;">
+          <label>Email</label>
+          <input type="email"  style="width: 200px" name="email" required>
+        </div>
+      
+        <div class="form-control" style="margin-top: 5px;">
+          <label>Workout Program</label>
+          <br>
+          <select name="workout_program" style="width: 200px" required>
+            <option selected hidden value="">Select Workout Program</option>
+            <option value="Yoga">Yoga</option>
+            <option value="Cardio">Cardio</option>
+            <option value="Pilates">Pilates</option>
+            <option value="Weight Training">Weight Training</option>
+            <option value="CrossFit">CrossFit</option>
+          </select>
+        </div>
+      
+        <div class="form-control" style="margin-top: 5px;">
+          <label>Time Slot</label>
+          <br>
+          <select name="time_slot" style="width: 200px" required>
+            <option selected hidden value="">Select time slot</option>
+            <option value="Morning 1">5:30am - 7:00am</option>
+            <option value="Morning 2">7:30am - 9:00am</option>
+            <option value="Morning 3">9:30am - 11:00am</option>
+            <option value="Afternoon">2:00pm - 3:30pm</option>
+            <option value="Evening 1">4:30pm - 6:00pm</option>
+            <option value="Evening 2">6:30pm - 8:00pm</option>
+      
+          </select>
+        </div>
+      
+        <div class="form-control" style="margin-top: 5px; margin-bottom: 10px;">
+          <label>Membership</label>
+          <br>
+          <select name="membership_period" style="width: 200px" required>
+            <option selected hidden value="">Select Membership</option>
+            <option value="One month">One Month (Rs.1000)</option>
+            <option value="Three months">Three Months (Rs.2700)</option>
+            <option value="Six months">Six Months (Rs.5000)</option>
+            <option value="One year">One Year (Rs.9000)</option>
+          </select>
+        </div>
+      
+        <button value="submit">SUBMIT BUTTON</button>
+        </form>
+      
+    </div>
+    <br>
 
     <!-- FOOTER -->
     <footer class="text-center text-lg-start bg-light text-muted">
